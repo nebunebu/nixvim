@@ -1,8 +1,14 @@
 {
-  plugins.nvim-cmp = {
+  plugins.cmp = {
     enable = true;
+    settings = {
+      window = {
+        completion.border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+        documentation.border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+      };
+    };
     # snippet.expand = "luasnip";
-    autoEnableSources = true;
+    # autoEnableSources = true;
     # sources = [
     #   { name = "cmp_nvim_lsp"; }
     #   { name = "nvim_lsp"; }
@@ -12,10 +18,6 @@
     #   # {name = "buffer";}
     #   { name = "cmp_luasnip"; }
     # ];
-    window = {
-      completion.border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-      documentation.border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-    };
     # mapping = {
     #   "<C-d>" = "cmp.mapping.scroll_docs(-4)";
     #   "<C-f>" = "cmp.mapping.scroll_docs(4)";

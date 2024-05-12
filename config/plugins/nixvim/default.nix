@@ -15,11 +15,17 @@
 
   plugins = {
     barbecue.enable = true;
-    comment-nvim.enable = true;
+    comment.enable = true;
     endwise.enable = true;
     fidget.enable = true;
-    indent-blankline.enable = true;
-    indent-blankline.scope.enabled = true;
+
+    indent-blankline = {
+      enable = true;
+      settings = {
+        scope.enabled = true;
+      };
+    };
+
     navbuddy.enable = true;
     navic.enable = true;
     nix-develop.enable = true;
@@ -27,7 +33,10 @@
     nvim-autopairs.enable = true;
     nvim-colorizer.enable = true;
     oil.enable = true;
-    project-nvim.enable = true;
+    project-nvim = {
+      enable = true;
+      enableTelescope = true;
+    };
     rainbow-delimiters.enable = true;
     surround.enable = true;
     tmux-navigator.enable = true;
