@@ -18,5 +18,5 @@ nix run .
 
 ## Resources
 
-- https://gist.github.com/siph/288b7c6b5f68a1902d28aebc95fde4c5
-- https://github.com/nix-community/nixvim
+- [siph/building_a_standalone_nixvim.md](https://gist.github.com/siph/288b7c6b5f68a1902d28aebc95fde4c5)
+- [nix-community/nixvim](https://github.com/nix-community/nixvim)

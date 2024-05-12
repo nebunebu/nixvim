@@ -1,8 +1,8 @@
 { pkgs, ... }: {
   extraPlugins = [
-    {
-      plugin = pkgs.callPackage ./triptych-nvim.nix { };
-    }
+    # {
+    #   plugin = pkgs.callPackage ../../triptych-nvim.nix { };
+    # }
     # { plugin = pkgs.triptych-nvim; }
     # { plugin = pkgs.vimPlugins.marks-nvim; }
     # {plugin = pkgs.telescope-vim-bookmarks-nvim;}
@@ -12,8 +12,8 @@
       config = "colorscheme rose-pine";
     }
   ];
-  extraConfigLua = ''
-      require("triptych").setup({})
-    --   require("marks").setup({})
-  '';
+  # extraConfigLua = ''
+  #     require("triptych").setup({})
+  #   --   require("marks").setup({})
+  # '';
 }

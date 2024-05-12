@@ -1,7 +1,6 @@
 {
   options = {
     autochdir = true;
-    # clipboard = "unnamedplus";
     number = true;
     relativenumber = true;
     expandtab = true;
