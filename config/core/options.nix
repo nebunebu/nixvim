@@ -1,5 +1,6 @@
 {
-  options = {
+  globals = { mapleader = " "; };
+  opts = {
     autochdir = true;
     number = true;
     relativenumber = true;
