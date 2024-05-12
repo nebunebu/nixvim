@@ -9,8 +9,8 @@
   ];
 
   enableMan = true;
-  # clipboard.providers.wl-copy.enable = true;
-  options = {
+  clipboard.providers.wl-copy.enable = true;
+  opts = {
     autochdir = true;
     number = true;
     relativenumber = true;
