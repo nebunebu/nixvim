@@ -15,3 +15,8 @@ To test your configuration simply run the following command
 ```
 nix run .
 ```
+
+## Resources
+
+- https://gist.github.com/siph/288b7c6b5f68a1902d28aebc95fde4c5
+- https://github.com/nix-community/nixvim
