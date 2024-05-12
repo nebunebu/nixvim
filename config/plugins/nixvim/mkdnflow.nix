@@ -1,5 +1,5 @@
 {
-  plugins.bufferline = {
+  plugins.mkdnflow = {
     enable = true;
   };
 }
