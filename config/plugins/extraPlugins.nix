@@ -1,19 +1,19 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: 
+{
   extraPlugins = [
-    # {
-    #   plugin = pkgs.callPackage ../../triptych-nvim.nix { };
-    # }
-    # { plugin = pkgs.triptych-nvim; }
-    # { plugin = pkgs.vimPlugins.marks-nvim; }
-    # {plugin = pkgs.telescope-vim-bookmarks-nvim;}
-    # {plugin = pkgs.vimPlugins.firenvim;}
     {
       plugin = pkgs.vimPlugins.rose-pine;
       config = "colorscheme rose-pine";
     }
+  # {
+  #   plugin = pkgs.callPackage ../pkgs/yazi-nvim.nix { };
+  # }
+    {
+      plugin = pkgs.callPackage ../../pkgs/triptych-nvim.nix { };
+ #    config = /* lua */ ''require("triptych").setup({})'';
+    }
   ];
-  # extraConfigLua = ''
-  #     require("triptych").setup({})
-  #   --   require("marks").setup({})
-  # '';
+   extraConfigLua = ''
+     require("triptych").setup({})
+   '';
 }

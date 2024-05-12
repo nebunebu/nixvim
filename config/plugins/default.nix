@@ -2,6 +2,7 @@
   imports = [
     # ./alpha.nix
     ./cmp.nix
+    ./extraPlugins.nix
     ./lsp.nix
     ./lualine.nix
     ./luasnip.nix
@@ -15,7 +16,6 @@
 
   plugins = {
     barbecue.enable = true;
-    yanky.systemClipboard.syncWithRing = true;
     comment.enable = true;
     endwise.enable = true;
     fidget.enable = true;
