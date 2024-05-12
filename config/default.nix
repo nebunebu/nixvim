@@ -10,6 +10,7 @@
 
   enableMan = true;
   clipboard.providers.wl-copy.enable = true;
+  globals = { mapleader = " ";};
   opts = {
     autochdir = true;
     number = true;
