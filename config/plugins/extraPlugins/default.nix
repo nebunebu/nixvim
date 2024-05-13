@@ -1,26 +1,28 @@
 { pkgs, ... }:
+let
+  pkgsDir = ../../../pkgs;
+in
 {
+
+  imports = [
+    ./journal-nvim.nix
+  ];
+
   extraPlugins = [
     {
       plugin = pkgs.vimPlugins.rose-pine;
       config = "colorscheme rose-pine";
     }
     {
-      plugin = pkgs.callPackage ../../pkgs/triptych-nvim.nix { };
-      config = /* lua */ ''
-        lua require("triptych").setup({})
-      '';
-    }
-    {
-      plugin = pkgs.callPackage ../../pkgs/journal-nvim.nix { };
+      plugin = pkgs.callPackage "${pkgsDir}/triptych-nvim.nix" { };
       config = /* lua */ ''
         lua << EOF
-        require("journal").setup({})
+        require("triptych").setup({})
         EOF
       '';
     }
     {
-      plugin = pkgs.callPackage ../../pkgs/surround-ui-nvim.nix { };
+      plugin = pkgs.callPackage "${pkgsDir}/surround-ui-nvim.nix" { };
       config = /* lua */ ''
         lua << EOF
         require("surround-ui").setup({

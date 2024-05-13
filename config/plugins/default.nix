@@ -2,7 +2,7 @@
   imports = [
     # ./alpha.nix
     ./cmp.nix
-    ./extraPlugins.nix
+    ./extraPlugins
     ./lsp.nix
     ./lualine.nix
     ./luasnip.nix
