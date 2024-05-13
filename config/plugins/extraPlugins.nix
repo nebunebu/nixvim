@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 {
   extraPlugins = [
     {
@@ -8,9 +8,7 @@
     {
       plugin = pkgs.callPackage ../../pkgs/triptych-nvim.nix { };
       config = /* lua */ ''
-        lua << EOF
-        require("triptych").setup({})
-        EOF
+        lua require("triptych").setup({})
       '';
     }
     {
@@ -34,6 +32,6 @@
   ];
 }
 
-  # {
-  #   plugin = pkgs.callPackage ../pkgs/yazi-nvim.nix { };
-  # }
+# {
+#   plugin = pkgs.callPackage ../pkgs/yazi-nvim.nix { };
+# }
