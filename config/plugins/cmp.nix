@@ -7,15 +7,25 @@
         documentation.border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
       };
     };
-    # snippet.expand = "luasnip";
-    # autoEnableSources = true;
+    autoEnableSources = true;
+    settings = {
+      snippet = {
+        expand = "luasnip";
+      };
+    };
+    # cmdline = {
+    #   "/" = {
+    #     mapping = {
+    #     };
+    #   };
+    # };
     # sources = [
     #   { name = "cmp_nvim_lsp"; }
     #   { name = "nvim_lsp"; }
     #   { name = "nvim_lsp_signature_help"; }
     #   { name = "luasnip"; }
     #   { name = "path"; }
-    #   # {name = "buffer";}
+    #   { name = "buffer"; }
     #   { name = "cmp_luasnip"; }
     # ];
     # mapping = {
