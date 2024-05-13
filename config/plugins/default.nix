@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./alpha.nix
+    ./alpha.nix
     ./cmp.nix
     ./extraPlugins
     ./lsp.nix
