@@ -62,7 +62,7 @@
         (mkPadding 2)
         (mkHeading "configs")
         (mkButton "nix-config" "󱄅" "e $HOME/.nix-config/flake.nix" "c")
-        (mkButton "nixvim" "" "e $HOME/.nixvim/flake.nix" "v")
+        (mkButton "nixvim" "" "e $HOME/.nixvim/flake.nix" "v")
         (mkPadding 1)
         (mkHeading "writing")
         (mkButton "wiki" "󰖬" "e $HOME/.wiki/index.md" "w")
