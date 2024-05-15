@@ -1,4 +1,6 @@
 {
+  plugins.luasnip.enable = true;
+
   plugins.cmp = {
     enable = true;
     settings = {
@@ -6,42 +8,47 @@
         completion.border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
         documentation.border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
       };
-    };
-    autoEnableSources = true;
-    settings = {
       snippet = {
-        expand = "luasnip";
+        expand = ''
+          function(args)
+            require('luasnip').lsp_expand(args.body)
+          end
+        '';
       };
     };
-    # cmdline = {
-    #   "/" = {
-    #     mapping = {
-    #     };
-    #   };
-    # };
-    # sources = [
-    #   { name = "cmp_nvim_lsp"; }
-    #   { name = "nvim_lsp"; }
-    #   { name = "nvim_lsp_signature_help"; }
-    #   { name = "luasnip"; }
-    #   { name = "path"; }
-    #   { name = "buffer"; }
-    #   { name = "cmp_luasnip"; }
-    # ];
-    # mapping = {
-    #   "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-    #   "<C-f>" = "cmp.mapping.scroll_docs(4)";
-    #   "<C-Space>" = "cmp.mapping.complete()";
-    #   "<C-e>" = "cmp.mapping.close()";
-    #   "<Tab>" = {
-    #     modes = [ "i" "s" ];
-    #     action = "cmp.mapping.select_next_item()";
-    #   };
-    #   "<S-Tab>" = {
-    #     modes = [ "i" "s" ];
-    #     action = "cmp.mapping.select_prev_item()";
-    #   };
-    #   "<CR>" = "cmp.mapping.confirm({ select = true })";
-    # };
+    autoEnableSources = true;
+    cmdline = {
+      "/" = {
+        mapping = {
+          __raw = "cmp.mapping.preset.cmdline()";
+        };
+        sources = [{ name = "buffer"; }];
+      };
+      ":" = {
+        mapping = {
+          __raw = "cmp.mapping.preset.cmdline()";
+        };
+        sources = [
+          { name = "path"; }
+          {
+            name = "cmdline";
+            option = {
+              ignore_cmds = [
+                "Man"
+                "!"
+              ];
+            };
+          }
+        ];
+      };
+      settings = {
+        sources = [
+          { name = "nvim_lsp"; }
+          { name = "luasnip"; }
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
+      };
+    };
   };
 }

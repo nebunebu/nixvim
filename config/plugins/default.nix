@@ -36,7 +36,6 @@
         scope.enabled = true;
       };
     };
-
     project-nvim = {
       enable = true;
       enableTelescope = true;
