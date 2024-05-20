@@ -5,7 +5,7 @@ in
 {
 
   imports = [
-    ./journal-nvim.nix
+    ./journal-nvim
   ];
 
   extraPlugins = [
