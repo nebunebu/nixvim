@@ -55,8 +55,15 @@
         ];
 
         window = {
-          completion.border = "rounded";
-          documentation.border = "rounded";
+          completion = {
+            border = "rounded";
+            # zindex = 10;
+          };
+          documentation = {
+            border = "rounded";
+            # zindex = 10;
+          };
+
         };
 
         experimental.ghost_text = true;

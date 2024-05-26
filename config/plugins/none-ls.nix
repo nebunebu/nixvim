@@ -3,6 +3,7 @@
     lsp-format.enable = true;
     none-ls = {
       enable = true;
+      border = "rounded";
       enableLspFormat = true;
       sources = {
         code_actions = {
