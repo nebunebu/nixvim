@@ -1,13 +1,8 @@
 {
   plugins = {
-    cmp-nvim-lsp.enable = true;
-    cmp-emoji.enable = true;
-    cmp-buffer.enable = true;
-    cmp-path.enable = true;
-    cmp_luasnip.enable = true;
     cmp = {
       enable = true;
-      # Preselect first entry
+      autoEnableSources = true;
       settings = {
         completion.completeopt = "menu,menuone,noinsert";
         sources = [
@@ -41,6 +36,7 @@
           "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
           "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
         };
+
         snippet = {
           expand = ''
             function(args)
@@ -110,7 +106,6 @@
 # {
 #   plugins.luasnip.enable = true;
 #
-#     autoEnableSources = true;
 #     cmdline = {
 #       "/" = {
 #         mapping = {
@@ -133,14 +128,6 @@
 #               ];
 #             };
 #           }
-#         ];
-#       };
-#       settings = {
-#         sources = [
-#           { name = "nvim_lsp"; }
-#           { name = "luasnip"; }
-#           { name = "path"; }
-#           { name = "buffer"; }
 #         ];
 #       };
 #     };
