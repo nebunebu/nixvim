@@ -1,10 +1,5 @@
 {
   plugins = {
-    lspkind = {
-      enable = true;
-      cmp.enable = true;
-      mode = "symbol_text";
-    };
     lsp = {
       enable = true;
       keymaps = {
