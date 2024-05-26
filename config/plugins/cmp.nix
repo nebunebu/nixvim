@@ -5,6 +5,40 @@
       autoEnableSources = true;
       settings = {
         completion.completeopt = "menu,menuone,noinsert";
+
+        # NOTE: don't think cmp.cmdline is working
+        cmp.cmdline = {
+          "/" = {
+            mapping = {
+              __raw = "cmp.mapping.preset.cmdline()";
+            };
+            sources = [
+              {
+                name = "buffer";
+              }
+            ];
+          };
+          ":" = {
+            mapping = {
+              __raw = "cmp.mapping.preset.cmdline()";
+            };
+            sources = [
+              {
+                name = "path";
+              }
+              {
+                name = "cmdline";
+                option = {
+                  ignore_cmds = [
+                    "Man"
+                    "!"
+                  ];
+                };
+              }
+            ];
+          };
+        };
+
         sources = [
           { name = "nvim_lsp"; } # lsp
           {
@@ -103,33 +137,3 @@
     };
   };
 }
-# {
-#   plugins.luasnip.enable = true;
-#
-#     cmdline = {
-#       "/" = {
-#         mapping = {
-#           __raw = "cmp.mapping.preset.cmdline()";
-#         };
-#         sources = [{ name = "buffer"; }];
-#       };
-#       ":" = {
-#         mapping = {
-#           __raw = "cmp.mapping.preset.cmdline()";
-#         };
-#         sources = [
-#           { name = "path"; }
-#           {
-#             name = "cmdline";
-#             option = {
-#               ignore_cmds = [
-#                 "Man"
-#                 "!"
-#               ];
-#             };
-#           }
-#         ];
-#       };
-#     };
-#   };
-# }
