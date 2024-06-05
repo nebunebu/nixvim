@@ -38,6 +38,7 @@
     };
   };
 
+
   extraConfigLua = ''
     -- You will likely want to reduce updatetime which affects CursorHold
     -- note: this setting is global and should be set only once
@@ -63,7 +64,9 @@
           scope = "cursor",
           close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
           relative = "cursor",
-          anchor = "NW",
+          anchor = "NE",
+          row = 1,
+          col = 1,
         })
       end
     })
