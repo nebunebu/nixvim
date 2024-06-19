@@ -10,5 +10,10 @@
       pattern = [ "nix" ];
       command = "inoremap <buffer> = =;<left>";
     }
+    {
+      event = [ "FileType" ];
+      pattern = [ "markdown" ];
+      command = "setlocal tabstop=2";
+    }
   ];
 }

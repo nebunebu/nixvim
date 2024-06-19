@@ -40,6 +40,7 @@
         };
 
         sources = [
+          { name = "mkdnflow"; }
           { name = "nvim_lsp"; } # lsp
           {
             name = "buffer";

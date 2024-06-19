@@ -2,7 +2,7 @@
   plugins.treesitter = {
     enable = true;
     ensureInstalled = "all";
-    indent = true;
+    # indent = true;
     nixvimInjections = true;
     incrementalSelection.enable = true;
   };
